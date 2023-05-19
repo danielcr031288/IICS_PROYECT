@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "jt3dYmGOFCplu5U6G5BAA1",
+    "name" : "REPO_BCR_DWH_DESARROLLO",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ {
+        "name" : "IS_DEF_LOC",
+        "value" : "true"
+      } ],
+      "additionalInfo" : {
+        "description" : "Repositorio de Desarrollo",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}
