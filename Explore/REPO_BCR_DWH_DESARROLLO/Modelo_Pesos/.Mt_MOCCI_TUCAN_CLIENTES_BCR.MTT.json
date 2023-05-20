@@ -1,0 +1,107 @@
+{
+  "objectInfo" : {
+    "id" : "5zQFfLHrWsFjt5R3M2VDma",
+    "name" : "Mt_MOCCI_TUCAN_CLIENTES_BCR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000001R"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "MAPA DE CARGA DE TUCAN",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "lYElU17Q4gSiwHoJ3b3V6E",
+    "name" : "Conn_BCR_TUCAN_CORE_SQL",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B00000000000Y"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexion hacia BCR TUCAN",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "8CfiILKcpADdxjkB2lT1cq",
+    "name" : "Conn_DEDWHDB_DATALAKE",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexión Ambiente desarrollo DWH",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "6b0WWcMQt8YiVJd4SdRi60",
+    "name" : "Mp_Tucan_Clientes_BCR",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM1700000000001Y"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "WF de clientes Tucan BCR",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "2KlpZ4hk80PgrgH0CxoRcH",
+    "name" : "BCR0106INFA8011",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM25000000000004"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}
