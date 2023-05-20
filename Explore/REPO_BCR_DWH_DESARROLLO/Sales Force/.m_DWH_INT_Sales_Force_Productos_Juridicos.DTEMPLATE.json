@@ -24,6 +24,26 @@
   },
   "dataFileExtension" : "zip",
   "objectRefs" : [ {
+    "id" : "a2bB3Dl9odLfJ36BliQUce",
+    "name" : "Conn_USR_ACCESO_BO_BCR",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B000000000013"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexión Ambiente desarrollo DWH",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
     "id" : "hpB8VUauhefjcJs25ZGnMr",
     "name" : "Conn_SalesForce_Desarrollo_SANDBOX_OLD",
     "type" : "Connection",
@@ -38,26 +58,6 @@
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Conexión Ambiente desarrollo sandbox desarrollo",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
-    "id" : "8CfiILKcpADdxjkB2lT1cq",
-    "name" : "Conn_DEDWHDB_DATALAKE",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010UYM0B000000000002"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Conexión Ambiente desarrollo DWH",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
