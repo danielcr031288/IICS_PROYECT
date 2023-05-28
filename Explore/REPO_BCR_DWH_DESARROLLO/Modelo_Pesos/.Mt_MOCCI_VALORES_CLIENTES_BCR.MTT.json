@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "1yH1sRc4n5CcvjkdKpZAOV",
+    "id" : "fLQvO0n7SsVi00kFG9tJW6",
     "name" : "Mt_MOCCI_VALORES_CLIENTES_BCR",
     "type" : "MTT",
     "metadata" : {
@@ -9,14 +9,14 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010UYM0Z000000000038"
+        "repoHandle" : "010UYM0Z000000000039"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "MAPA DE CARGA DE LINEAS_CREDITO_BCR",
+        "description" : "MAPA DE CARGA DE TUCAN",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
