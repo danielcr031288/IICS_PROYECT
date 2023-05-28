@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>jzREhNWIsoZduD2-gt-49709877-2023-05-28T03:21:00.155Z::tf.xml</types1:EntryId>
+      <types1:EntryId>y7hsAVR3aaa-gt-56050014-2023-05-28T03:38:51.399Z::tf.xml</types1:EntryId>
       <types1:Name>tf_VALORES_CLIENTES_BCR</types1:Name>
       <types1:MimeType>application/xml+taskflow</types1:MimeType>
       <types1:Description>FLUJO DE CARGA DE VALORES_CLIENTES_BCR</types1:Description>
@@ -11,10 +11,13 @@
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
       <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
-      <types1:CreationDate>2023-05-28T03:21:00Z</types1:CreationDate>
+      <types1:CreationDate>2023-05-28T03:38:51Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
-      <types1:ModificationDate>2023-05-28T03:24:15Z</types1:ModificationDate>
-      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:ModificationDate>2023-05-28T03:56:55Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
+      <types1:PublicationDate>2023-05-28T03:57:17Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_VALORES_CLIENTES_BCR/tf_VALORES_CLIENTES_BCR.tf.xml</types1:PublishedContributionId>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -282,11 +285,11 @@
                         <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
                         <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
                         <parameter name="Task Name" source="constant" updatable="true">Mt_MOCCI_VALORES_CLIENTES_BCR</parameter>
-                        <parameter name="GUID" source="constant" updatable="true">1yH1sRc4n5CcvjkdKpZAOV</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">fLQvO0n7SsVi00kFG9tJW6</parameter>
                         <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
                         <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
                         <parameter name="taskField" source="nested">
-                           <operation source="field" to="Mt-MOCCI-TUCAN-CLIENTES-BCR">temp.Mt_MOCCI_LINEAS_CREDITO_BCR</operation>
+                           <operation source="field" to="Mt-MOCCI-VALORES-CLIENTES-BCR">temp.Mt_MOCCI_VALORES_CLIENTES_BCR</operation>
                         </parameter>
                      </serviceInput>
                      <serviceOutput>
@@ -543,8 +546,8 @@
             </dependencies>
          </taskflow>
       </types1:Entry>
-      <types1:GUID>l7mDPWA6aa3hzl0OVcxx4p</types1:GUID>
+      <types1:GUID>6jYYgFKTZ6oh78GP6eyTSt</types1:GUID>
       <types1:DisplayName>tf_VALORES_CLIENTES_BCR</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-05-28T03:34:59.146Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-05-28T03:58:43.616Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

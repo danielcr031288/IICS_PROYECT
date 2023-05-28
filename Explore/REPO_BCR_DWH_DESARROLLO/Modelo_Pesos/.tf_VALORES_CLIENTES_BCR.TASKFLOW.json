@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "l7mDPWA6aa3hzl0OVcxx4p",
+    "id" : "6jYYgFKTZ6oh78GP6eyTSt",
     "name" : "tf_VALORES_CLIENTES_BCR",
     "type" : "TASKFLOW",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "jzREhNWIsoZduD2-gt-49709877-2023-05-28T03:21:00.155Z::tf.xml"
+        "repoHandle" : "y7hsAVR3aaa-gt-56050014-2023-05-28T03:38:51.399Z::tf.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -21,7 +21,7 @@
   },
   "dataFileExtension" : "xml",
   "objectRefs" : [ {
-    "id" : "1yH1sRc4n5CcvjkdKpZAOV",
+    "id" : "fLQvO0n7SsVi00kFG9tJW6",
     "name" : "Mt_MOCCI_VALORES_CLIENTES_BCR",
     "type" : "MTT",
     "metadata" : {
@@ -30,14 +30,11 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010UYM0Z000000000038"
+        "repoHandle" : "010UYM0Z000000000039"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "MAPA DE CARGA DE LINEAS_CREDITO_BCR",
+        "description" : "MAPA DE CARGA DE VALORES_CLIENTES_BCR",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
