@@ -1,0 +1,107 @@
+{
+  "objectInfo" : {
+    "id" : "19vIz6rVO85c0yr9ZGM3AX",
+    "name" : "tf_COMEX_DILIGENCIAS_SALIENTES",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "JWjzDt0x7bcoq3x-gt-58084754-2023-04-27T05:50:57.2Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "FLUJO DE COMEX_DILIGENCIAS_SALIENTES",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "a1G34BmmxWchxvIbamwcSl",
+    "name" : "mt_GEN_Obtiene_FECHA_ULTIMA_CARGA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000Y"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  }, {
+    "id" : "46xY2BZQ5gGcseyxu5At2I",
+    "name" : "Mt_COMEX_DILIGENCIAS_SALIENTES",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z000000000030"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/BankTrade"
+  }, {
+    "id" : "3YMODnRMgIFiCFw2CirmuB",
+    "name" : "mt_GEN_Obtiene_ID_Proceso_Carga",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  }, {
+    "id" : "iedOBbOqheSjfaJVCTeYkI",
+    "name" : "mt_GEN_ACTUALIZA_FECHA_ULTIMA_CARGA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  } ]
+}
