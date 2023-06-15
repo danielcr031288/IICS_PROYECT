@@ -44,8 +44,8 @@
     },
     "path" : "/SYS"
   }, {
-    "id" : "8CfiILKcpADdxjkB2lT1cq",
-    "name" : "Conn_DEDWHDB_DATALAKE",
+    "id" : "46cML5agGe5b97jqRYHfyo",
+    "name" : "Conn_DEDWHDB_USRPWC",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -53,7 +53,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010UYM0B000000000002"
+        "repoHandle" : "010UYM0B00000000001T"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -78,46 +78,6 @@
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Conexión a la carpeta local donde se almacenan los archivos base que se requieren para las cargas a RC",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
-    "id" : "39oPXTr3NGuggrNieuIGg3",
-    "name" : "Conn_DEDWHDB_DWH",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010UYM0B00000000000H"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Conexión Ambiente desarrollo DWH",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
-    "id" : "aS8BYj5SQcJgB0YTMlUo8P",
-    "name" : "Conn_DEDWHDB_RUC",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010UYM0B00000000001C"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Conexión Ambiente desarrollo DWH-RUC",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
@@ -155,7 +115,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM1700000000002Z"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "   ",
         "contentType" : "JSON",

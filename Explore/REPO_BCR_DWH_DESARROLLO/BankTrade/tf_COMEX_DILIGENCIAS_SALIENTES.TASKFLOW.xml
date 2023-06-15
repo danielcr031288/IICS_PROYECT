@@ -13,8 +13,8 @@
       <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
       <types1:CreationDate>2023-04-27T05:50:57Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
-      <types1:ModificationDate>2023-04-27T05:55:17Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:ModificationDate>2023-06-15T22:34:38Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
       <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
       <types1:PublicationDate>2023-04-27T05:55:35Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.tf_COMEX_DILIGENCIAS_SALIENTES/tf_COMEX_DILIGENCIAS_SALIENTES.tf.xml</types1:PublishedContributionId>
@@ -541,5 +541,5 @@
       <types1:GUID>19vIz6rVO85c0yr9ZGM3AX</types1:GUID>
       <types1:DisplayName>tf_COMEX_DILIGENCIAS_SALIENTES</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-05-31T17:25:10.656Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-06-15T22:35:54.454Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

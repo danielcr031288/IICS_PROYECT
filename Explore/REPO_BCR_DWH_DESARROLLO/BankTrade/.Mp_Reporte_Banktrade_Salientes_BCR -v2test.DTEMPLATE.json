@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "7vpfuz7S4Eqgx2JzJli2Gp",
-    "name" : "Mp_Reporte_Banktrade_Entrantes_BCR",
+    "id" : "28XTcl8EXGzgCgTMO8kGIU",
+    "name" : "Mp_Reporte_Banktrade_Salientes_BCR -v2test",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010UYM1700000000002Z"
+        "repoHandle" : "010UYM1700000000002Y"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -38,26 +38,6 @@
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Conexion a COMEX BBKT91 desarrollo",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
-    "id" : "46cML5agGe5b97jqRYHfyo",
-    "name" : "Conn_DEDWHDB_USRPWC",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010UYM0B00000000001T"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Conexión Ambiente desarrollo DWH",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
