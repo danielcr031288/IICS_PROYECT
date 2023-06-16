@@ -95,7 +95,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM17000000000031"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "WF de Lineas de Credito , para el procesamiento de Mocci y Prtofundiadd de Linea",
         "contentType" : "JSON",

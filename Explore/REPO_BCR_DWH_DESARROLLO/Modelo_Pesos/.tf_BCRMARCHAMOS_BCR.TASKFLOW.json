@@ -1,0 +1,153 @@
+{
+  "objectInfo" : {
+    "id" : "0iu9lps0wM6eb2BUS3JFqL",
+    "name" : "tf_BCRMARCHAMOS_BCR",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "xeEaaaaaaaaaaaa-gt-14002947-2022-06-03T03:15:04.375Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "FLUJO DE BCRMARCHAMOS COMPLETO",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "af4nUjEtkLqjJJswr25HmF",
+    "name" : "Mt_MOCCI_MARCHAMOS_PERSONAS_BCR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000001L"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "0FeMBHshhfqlLdnZaFFdwL",
+    "name" : "Mt_MOCCI_MARCHAMOS_PAGO_BCR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000001K"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "a1G34BmmxWchxvIbamwcSl",
+    "name" : "mt_GEN_Obtiene_FECHA_ULTIMA_CARGA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000Y"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  }, {
+    "id" : "bnmmrRoOfAvkNHghj77US7",
+    "name" : "Mt_MOCCI_MARCHAMOS_COMPROBANTE_BCR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000001M"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "3YMODnRMgIFiCFw2CirmuB",
+    "name" : "mt_GEN_Obtiene_ID_Proceso_Carga",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  }, {
+    "id" : "iedOBbOqheSjfaJVCTeYkI",
+    "name" : "mt_GEN_ACTUALIZA_FECHA_ULTIMA_CARGA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  } ]
+}

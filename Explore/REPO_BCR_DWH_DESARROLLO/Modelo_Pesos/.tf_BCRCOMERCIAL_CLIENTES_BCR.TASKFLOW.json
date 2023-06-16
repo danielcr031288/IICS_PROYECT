@@ -1,0 +1,130 @@
+{
+  "objectInfo" : {
+    "id" : "7eNu4QIaTbDbfSS8wbG5aJ",
+    "name" : "tf_BCRCOMERCIAL_CLIENTES_BCR",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "94FDsZvEIAkRtO3-gt-706692-2022-06-24T02:39:39.979Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "FLUJO DE CARGA DE BCRCOMERCIAL",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "1asqX9am3aWluXP0Jx9fS6",
+    "name" : "Mt_MOCCI_BCRCOMERCIAL_COMI_CLI_ESP",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000003B"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "MAPA DE CARGA DE BCRCOMERCIAL PARA COMISIONES DE CLIENTES ESPECIALES",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "a1G34BmmxWchxvIbamwcSl",
+    "name" : "mt_GEN_Obtiene_FECHA_ULTIMA_CARGA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000Y"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  }, {
+    "id" : "aycW3Olsrx4cPJsIWnCwG3",
+    "name" : "Mt_MOCCI_BCRCOMERCIAL_CLIENTES_BCR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000001T"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "MAPA DE CARGA DE BCRCOMERCIAL",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "3YMODnRMgIFiCFw2CirmuB",
+    "name" : "mt_GEN_Obtiene_ID_Proceso_Carga",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  }, {
+    "id" : "iedOBbOqheSjfaJVCTeYkI",
+    "name" : "mt_GEN_ACTUALIZA_FECHA_ULTIMA_CARGA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000000Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
+  } ]
+}

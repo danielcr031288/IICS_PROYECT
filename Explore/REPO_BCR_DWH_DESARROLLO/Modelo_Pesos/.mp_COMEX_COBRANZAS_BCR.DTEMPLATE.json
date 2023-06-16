@@ -65,7 +65,7 @@
     "path" : "/SYS"
   }, {
     "id" : "4u8ZFAkJ52ql7a7mh1CcCv",
-    "name" : "Conn_DFS_RIESGO_CREDITO",
+    "name" : "Conn_flat_file_Bus_datos_Dummy_RC",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {

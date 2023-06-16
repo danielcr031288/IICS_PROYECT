@@ -1,0 +1,110 @@
+{
+  "objectInfo" : {
+    "id" : "lRUUF9vE9yNeypsskEy1Aq",
+    "name" : "Mt_MOCCI_FIDEICOMISOS_CLIENTES_BCR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000001Q"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "MAPA DE CARGA DE FIDEICOMISO",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "65AUZUxotgGeOa8dLc6Ai1",
+    "name" : "mp_FIDEICOMISOS_BCR",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM1700000000001S"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Taskflow DE FIDEICOMISO A DATA_LAKE:\n197: ADMINISTRACION, ADMINISTRACION DE FLUJOS Y PAGOS, ADMINISTRACION E INVERSION, COMISION DE CONFIANZA, GARANTIA, OPERATIVO, VIVIENDA\n637: OBRA PUBLICA\n244: OBRA PUBLICA",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "39oPXTr3NGuggrNieuIGg3",
+    "name" : "Conn_DEDWHDB_DWH",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B00000000000H"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexión Ambiente desarrollo DWH",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "0YFGZIfHvQsiB7Ehugf9OI",
+    "name" : "Conn_Archivos_Entrantes_FIDEICOMISOS",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B00000000000U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "2KlpZ4hk80PgrgH0CxoRcH",
+    "name" : "BCR0106INFA8011",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM25000000000004"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

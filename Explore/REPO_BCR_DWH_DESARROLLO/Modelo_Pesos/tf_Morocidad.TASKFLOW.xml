@@ -1,0 +1,249 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>aabbeJOSM8NciZB-gt-23412425-2022-01-27T21:14:07.801Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_Morocidad</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
+      <types1:CreationDate>2022-01-27T21:14:08Z</types1:CreationDate>
+      <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
+      <types1:ModificationDate>2022-08-01T18:13:40Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-28T18:06:34Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_Morocidad/tf_Morocidad.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_Morocidad"
+                   name="tf_Morocidad"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="mt_GEN_Obtiene_ID_Proceso_Carga"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-GEN-Obtiene-ID-Proceso-Carga</option>
+                  </options>
+               </field>
+               <field description="" name="Mt_MOCCI_Morocidad" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mt-MOCCI-Morocidad</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kyxh2puk" targetId="kyxh2pvc"/>
+               </start>
+               <eventContainer id="kyxh2pvc">
+                  <service id="kyxh2puj">
+                     <title>mt_GEN_Obtiene_ID_Proceso_Carga</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_GEN_Obtiene_ID_Proceso_Carga</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">3YMODnRMgIFiCFw2CirmuB</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-GEN-Obtiene-ID-Proceso-Carga">temp.mt_GEN_Obtiene_ID_Proceso_Carga</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_ID_BD">mp_ID_BD</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_ID_IMPLEMENTACION_ETL">mp_ID_IMPLEMENTACION_ETL</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mv_ID_PROCESO_CARGA">mv_ID_PROCESO_CARGA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_FECHA_HORA_INICIAL_CARGADA">mp_FECHA_HORA_INICIAL_CARGADA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_FECHA_HORA_FINAL_CARGADA">mp_FECHA_HORA_FINAL_CARGADA</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kyxirs2q" targetId="kyxirs2p"/>
+                  <events>
+                     <catch faultField="temp.mt_GEN_Obtiene_ID_Proceso_Carga/fault"
+                            id="kyxh2pva"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.mt_GEN_Obtiene_ID_Proceso_Carga/fault"
+                            id="kyxh2pvb"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kyxirs1k">
+                  <service id="kyxirs0v">
+                     <title>Mt_MOCCI_Morocidad</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mt_MOCCI_Morocidad</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">5TYiiAqIkhujgwNSW8AjQw</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mt-MOCCI-Morocidad">temp.Mt_MOCCI_Morocidad</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_Morocidad/inout/in_ID_Proceso_Carga">in_ID_Proceso_Carga</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kyxirs0x" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.Mt_MOCCI_Morocidad/fault"
+                            id="kyxirs1i"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Mt_MOCCI_Morocidad/fault"
+                            id="kyxirs1j"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <assignment id="kyxirs2p">
+                  <title>Assignment 1</title>
+                  <operation source="field"
+                             to="temp.Mt_MOCCI_Morocidad[1]/inout[1]/in_ID_Proceso_Carga">temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mv_ID_PROCESO_CARGA</operation>
+                  <link id="kyxirs2r" targetId="kyxirs1k"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-GEN-Obtiene-ID-Proceso-Carga"
+                              isByCopy="true"
+                              name="mt-GEN-Obtiene-ID-Proceso-Carga">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mt-MOCCI-Morocidad"
+                              isByCopy="true"
+                              name="Mt-MOCCI-Morocidad">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>7Z6t4vDYZ47knB0yuL1Nq4</types1:GUID>
+      <types1:DisplayName>tf_Morocidad</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-06-16T00:13:22.407Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

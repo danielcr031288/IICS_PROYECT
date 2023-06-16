@@ -72,7 +72,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM0Z00000000001R"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "MAPA DE CARGA DE TUCAN",
         "contentType" : "JSON",

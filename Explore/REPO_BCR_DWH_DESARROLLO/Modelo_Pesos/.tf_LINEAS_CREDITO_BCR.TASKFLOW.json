@@ -32,7 +32,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM0Z000000000037"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "MAPA DE CARGA DE LINEAS_CREDITO_BCR",
         "contentType" : "JSON",

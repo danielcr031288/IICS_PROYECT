@@ -32,7 +32,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM0Z000000000039"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "MAPA DE CARGA DE VALORES_CLIENTES_BCR",
         "contentType" : "JSON",

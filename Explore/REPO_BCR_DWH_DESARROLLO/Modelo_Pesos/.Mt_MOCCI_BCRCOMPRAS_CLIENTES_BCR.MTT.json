@@ -75,7 +75,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM17000000000025"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "WF de clientes BCRCOMPRAS_CLIENTES_BCR ",
         "contentType" : "JSON",

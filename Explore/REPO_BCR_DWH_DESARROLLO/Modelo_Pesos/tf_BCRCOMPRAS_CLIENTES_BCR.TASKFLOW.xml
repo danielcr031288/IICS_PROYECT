@@ -1,0 +1,537 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>vHWOMzeHbcjqbdp-gt-29850897-2022-07-20T19:25:41.354Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_BCRCOMPRAS_CLIENTES_BCR</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>FLUJO DE CARGA DE  BCRCOMPRAS</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
+      <types1:CreationDate>2022-07-20T19:25:41Z</types1:CreationDate>
+      <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
+      <types1:ModificationDate>2022-07-20T20:04:37Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
+      <types1:PublicationDate>2022-07-20T20:05:02Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_BCRCOMPRAS_CLIENTES_BCR/tf_BCRCOMPRAS_CLIENTES_BCR.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_BCRCOMPRAS_CLIENTES_BCR"
+                   name="tf_BCRCOMPRAS_CLIENTES_BCR"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>FLUJO DE CARGA DE  BCRCOMPRAS</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="mt_GEN_Obtiene_ID_Proceso_Carga"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-GEN-Obtiene-ID-Proceso-Carga</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mt-MOCCI-BCRCOMPRAS-CLIENTES-BCR</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="mt_GEN_Obtiene_fecha_Ultima_Carga"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-GEN-Obtiene-FECHA-ULTIMA-CARGA</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="mt_GEN_Actualiza_fecha_Ultima_Carga"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-GEN-ACTUALIZA-FECHA-ULTIMA-CARGA</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kzrw3yrp" targetId="kzrw3yro"/>
+               </start>
+               <assignment id="kzrw3yro">
+                  <title>Asg_inicia_parametros</title>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
+                     <expression language="XQuery">2026</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR[1]/inout[1]/in_ID_Proceso_Carga">
+                     <expression language="XQuery">''</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mv_ID_PROCESO_CARGA">
+                     <expression language="XQuery">''</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga[1]/inout[1]/mp_Formato">
+                     <expression language="XQuery">'AAAAMMDD HH24:MI:SS'</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga[1]/inout[1]/mv_FECHA_ULTIMA_CARGA">
+                     <expression language="XQuery">''</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
+                     <expression language="XQuery">''</expression>
+                  </operation>
+                  <link id="kzrw3yrq" targetId="kyxh2pvc"/>
+               </assignment>
+               <assignment id="kyxirs2p">
+                  <title>Asg_ID_PROCESO_CARGA</title>
+                  <operation source="field"
+                             to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR[1]/inout[1]/in_ID_Proceso_Carga">temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mv_ID_PROCESO_CARGA</operation>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
+                     <expression language="XQuery">2026</expression>
+                  </operation>
+                  <link id="l3johfw3" targetId="kznfnksg"/>
+               </assignment>
+               <assignment id="l3johfwt">
+                  <title>Asg_Fecha_Ultima_Carga</title>
+                  <operation source="field"
+                             to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR[1]/inout[1]/mp_Fecha_Ult_Carga">temp.mt_GEN_Obtiene_fecha_Ultima_Carga[1]/inout[1]/mv_FECHA_ULTIMA_CARGA</operation>
+                  <link id="l3johfwv" targetId="kyxirs1k"/>
+               </assignment>
+               <assignment id="kzrsws6g">
+                  <title>Asg_Fecha_Actualiza_Ultima_Carga</title>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga[1]/inout[1]/mp_FECHA_YYYYMMDD_HH_MM_SS">
+                     <expression language="XQuery">date:toChar(fn:adjust-dateTime-to-timezone(xs:dateTime(fn:current-dateTime()), xs:dayTimeDuration('-PT6H')), 'YYYYMMDD HH24:MI:SS')
+</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
+                     <expression language="XQuery">2026</expression>
+                  </operation>
+                  <link id="kzrsws6i" targetId="kzrsws3y"/>
+               </assignment>
+               <eventContainer id="kyxh2pvc">
+                  <service id="kyxh2puj">
+                     <title>mt_GEN_Obtiene_ID_Proceso_Carga</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_GEN_Obtiene_ID_Proceso_Carga</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">3YMODnRMgIFiCFw2CirmuB</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-GEN-Obtiene-ID-Proceso-Carga">temp.mt_GEN_Obtiene_ID_Proceso_Carga</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_ID_BD">mp_ID_BD</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_ID_IMPLEMENTACION_ETL">mp_ID_IMPLEMENTACION_ETL</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mv_ID_PROCESO_CARGA">mv_ID_PROCESO_CARGA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_FECHA_HORA_INICIAL_CARGADA">mp_FECHA_HORA_INICIAL_CARGADA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_ID_Proceso_Carga/inout/mp_FECHA_HORA_FINAL_CARGADA">mp_FECHA_HORA_FINAL_CARGADA</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kyxirs2q" targetId="kyxirs2p"/>
+                  <events>
+                     <catch faultField="temp.mt_GEN_Obtiene_ID_Proceso_Carga/fault"
+                            id="kyxh2pva"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.mt_GEN_Obtiene_ID_Proceso_Carga/fault"
+                            id="kyxh2pvb"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kznfnksg">
+                  <service id="kznfnksa">
+                     <title>mt_GEN_Obtiene_fecha_Ultima_Carga</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_GEN_Obtiene_FECHA_ULTIMA_CARGA</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">a1G34BmmxWchxvIbamwcSl</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-GEN-Obtiene-FECHA-ULTIMA-CARGA">temp.mt_GEN_Obtiene_fecha_Ultima_Carga</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mp_ID_BD">mp_ID_BD</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mp_ID_IMPLEMENTACION_ETL">mp_ID_IMPLEMENTACION_ETL</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mv_ID_PROCESO_CARGA">mv_ID_PROCESO_CARGA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mp_FECHA_HORA_INICIAL_CARGADA">mp_FECHA_HORA_INICIAL_CARGADA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mp_FECHA_HORA_FINAL_CARGADA">mp_FECHA_HORA_FINAL_CARGADA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mv_FECHA_ULTIMA_CARGA">mv_FECHA_ULTIMA_CARGA</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/inout/mp_Formato">mp_Formato</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="l3johfwu" targetId="l3johfwt"/>
+                  <events>
+                     <catch faultField="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/fault"
+                            id="kznfnkse"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.mt_GEN_Obtiene_fecha_Ultima_Carga/fault"
+                            id="kznfnksf"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kyxirs1k">
+                  <service id="kyxirs0v">
+                     <title>Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">4sfIkuLoUundUsELpIRLwh</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mt-MOCCI-BCRCOMPRAS-CLIENTES-BCR">temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/inout/in_ID_Proceso_Carga">in_ID_Proceso_Carga</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/inout/mp_Fecha_Ult_Carga">mp_Fecha_Ult_Carga</operation>
+                        <operation source="field"
+                                   to="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/inout/mp_Fecha_Ini_Carga">mp_Fecha_Ini_Carga</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kzrsws6h" targetId="kzrsws6g"/>
+                  <events>
+                     <catch faultField="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/fault"
+                            id="kyxirs1i"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Mt_MOCCI_BCRCOMPRAS_CLIENTES_BCR/fault"
+                            id="kyxirs1j"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kzrsws3y">
+                  <service id="kzrsws33">
+                     <title>mt_GEN_Actualiza_fecha_Ultima_Carga</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_GEN_ACTUALIZA_FECHA_ULTIMA_CARGA</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">iedOBbOqheSjfaJVCTeYkI</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-GEN-ACTUALIZA-FECHA-ULTIMA-CARGA">temp.mt_GEN_Actualiza_fecha_Ultima_Carga</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/inout/mp_ID_IMPLEMENTACION_ETL">mp_ID_IMPLEMENTACION_ETL</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/inout/mp_FECHA_YYYYMMDD_HH_MM_SS">mp_FECHA_YYYYMMDD_HH_MM_SS</operation>
+                        <operation source="field"
+                                   to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/inout/mv_Resultado">mv_Resultado</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kzrsws35" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/fault"
+                            id="kzrsws3w"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.mt_GEN_Actualiza_fecha_Ultima_Carga/fault"
+                            id="kzrsws3x"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-GEN-Obtiene-ID-Proceso-Carga"
+                              isByCopy="true"
+                              name="mt-GEN-Obtiene-ID-Proceso-Carga">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mt-MOCCI-BCRCOMPRAS-CLIENTES-BCR"
+                              isByCopy="true"
+                              name="Mt-MOCCI-BCRCOMPRAS-CLIENTES-BCR">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-GEN-Obtiene-FECHA-ULTIMA-CARGA"
+                              isByCopy="true"
+                              name="mt-GEN-Obtiene-FECHA-ULTIMA-CARGA">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-GEN-ACTUALIZA-FECHA-ULTIMA-CARGA"
+                              isByCopy="true"
+                              name="mt-GEN-ACTUALIZA-FECHA-ULTIMA-CARGA">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>52cnDraQQ6Tl7obfCISAyG</types1:GUID>
+      <types1:DisplayName>tf_BCRCOMPRAS_CLIENTES_BCR</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-06-16T00:13:22.427Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
