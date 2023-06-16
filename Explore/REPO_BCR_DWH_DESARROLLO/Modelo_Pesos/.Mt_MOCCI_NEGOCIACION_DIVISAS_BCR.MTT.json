@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "MAPA DE CARGA DE LINEAS_CREDITO_BCR",
+        "description" : "MAPA DE CARGA DE NEGOCIACION DE DIVISAS",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
