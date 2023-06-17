@@ -13,8 +13,8 @@
       <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
       <types1:CreationDate>2023-05-27T18:57:56Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
-      <types1:ModificationDate>2023-05-27T19:03:52Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:ModificationDate>2023-06-17T01:42:13Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
       <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
       <types1:PublicationDate>2023-05-27T19:04:09Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.tf_LINEAS_CREDITO_BCR/tf_LINEAS_CREDITO_BCR.tf.xml</types1:PublishedContributionId>
@@ -79,7 +79,7 @@
                   <title>Asg_inicia_parametros</title>
                   <operation source="formula"
                              to="temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
-                     <expression language="XQuery">2138</expression>
+                     <expression language="XQuery">2151</expression>
                   </operation>
                   <operation source="formula"
                              to="temp.Mt_MOCCI_LINEAS_CREDITO_BCR[1]/inout[1]/in_ID_Proceso_Carga">
@@ -109,7 +109,7 @@
                              to="temp.Mt_MOCCI_LINEAS_CREDITO_BCR[1]/inout[1]/in_ID_Proceso_Carga">temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mv_ID_PROCESO_CARGA</operation>
                   <operation source="formula"
                              to="temp.mt_GEN_Obtiene_fecha_Ultima_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
-                     <expression language="XQuery">2138</expression>
+                     <expression language="XQuery">2151</expression>
                   </operation>
                   <link id="l3johfw3" targetId="kznfnksg"/>
                </assignment>
@@ -128,7 +128,7 @@
                   </operation>
                   <operation source="formula"
                              to="temp.mt_GEN_Actualiza_fecha_Ultima_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
-                     <expression language="XQuery">2138</expression>
+                     <expression language="XQuery">2151</expression>
                   </operation>
                   <link id="kzrsws6i" targetId="kzrsws3y"/>
                </assignment>
@@ -546,5 +546,5 @@
       <types1:GUID>5KEL0peNcWCcVFghFfxs03</types1:GUID>
       <types1:DisplayName>tf_LINEAS_CREDITO_BCR</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-06-17T00:47:48.245Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-06-17T01:43:23.594Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

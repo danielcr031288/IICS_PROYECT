@@ -13,8 +13,8 @@
       <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
       <types1:CreationDate>2023-06-17T00:21:14Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
-      <types1:ModificationDate>2023-06-17T00:27:06Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:ModificationDate>2023-06-17T01:40:13Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
       <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
       <types1:PublicationDate>2023-06-17T00:27:18Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.tf_NEGOCIACION_DIVISAS_BCR/tf_NEGOCIACION_DIVISAS_BCR.tf.xml</types1:PublishedContributionId>
@@ -61,7 +61,7 @@
                   <title>Asg_inicia_parametros</title>
                   <operation source="formula"
                              to="temp.mt_GEN_Obtiene_ID_Proceso_Carga[1]/inout[1]/mp_ID_IMPLEMENTACION_ETL">
-                     <expression language="XQuery">2026</expression>
+                     <expression language="XQuery">2152</expression>
                   </operation>
                   <operation source="formula"
                              to="temp.Mt_NEGOCIACION_DIVISAS_BCR[1]/inout[1]/in_ID_Proceso_Carga">
@@ -283,5 +283,5 @@
       <types1:GUID>2Cht3ilPSr3bZ1251l7wEL</types1:GUID>
       <types1:DisplayName>tf_NEGOCIACION_DIVISAS_BCR</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-06-17T00:47:48.144Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-06-17T01:43:23.409Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
