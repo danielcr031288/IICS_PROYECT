@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "35Yftl6VxglcjAKJ6WQmye",
+    "name" : "Mapping de GARANTIAS_SF_DWH",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM1700000000003C"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Extracts data incrementally from a Salesforce object based on its timestamp and loads it to an existing target.\n\nThe Mapping task extracts data from the Salesforce object starting at the last saved timestamp value (ms precision). The last saved timestamp value is stored in in-out parameter, v_max_value.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ ]
+}

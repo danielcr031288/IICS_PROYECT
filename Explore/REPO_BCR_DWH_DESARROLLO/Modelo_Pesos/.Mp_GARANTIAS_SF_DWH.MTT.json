@@ -1,0 +1,130 @@
+{
+  "objectInfo" : {
+    "id" : "3jdFqHKEkD8fVP6ltOlmQt",
+    "name" : "Mp_GARANTIAS_SF_DWH",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000003I"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "4zSVRbwy4gwboR0kInfzWl",
+    "name" : "Conn_SalesForce_Desarrollo_COMPLETO",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B00000000000G"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexión Ambiente desarrollo sandbox desarrollo COMPLETO",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "46cML5agGe5b97jqRYHfyo",
+    "name" : "Conn_DEDWHDB_USRPWC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B00000000001T"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexión Ambiente desarrollo DWH",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "35Yftl6VxglcjAKJ6WQmye",
+    "name" : "Mapping de GARANTIAS_SF_DWH",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM1700000000003C"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Extracts data incrementally from a Salesforce object based on its timestamp and loads it to an existing target.\n\nThe Mapping task extracts data from the Salesforce object starting at the last saved timestamp value (ms precision). The last saved timestamp value is stored in in-out parameter, v_max_value.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
+    "id" : "4u8ZFAkJ52ql7a7mh1CcCv",
+    "name" : "Conn_flat_file_Bus_datos_Dummy_RC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0B00000000000C"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Conexión a la carpeta local donde se almacenan los archivos base que se requieren para las cargas a RC",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "2KlpZ4hk80PgrgH0CxoRcH",
+    "name" : "BCR0106INFA8011",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM25000000000004"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

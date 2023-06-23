@@ -56,7 +56,7 @@
       "additionalInfo" : {
         "description" : "MAPA DE CARGA DE SEGUROS",
         "contentType" : "JSON",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     },
     "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
@@ -80,26 +80,6 @@
       }
     },
     "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/General_Procesos"
-  }, {
-    "id" : "2KlpZ4hk80PgrgH0CxoRcH",
-    "name" : "BCR0106INFA8011",
-    "type" : "AgentGroup",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010UYM25000000000004"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : null,
-        "contentType" : "JSON",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/SYS"
   }, {
     "id" : "iedOBbOqheSjfaJVCTeYkI",
     "name" : "mt_GEN_ACTUALIZA_FECHA_ULTIMA_CARGA",
