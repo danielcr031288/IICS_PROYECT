@@ -13,11 +13,8 @@
       <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
       <types1:CreationDate>2023-06-20T18:15:19Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
-      <types1:ModificationDate>2023-06-21T04:39:33Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
-      <types1:PublicationDate>2023-06-21T04:39:45Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/tf.tf_SEGUROS_BCR/tf_SEGUROS_BCR.tf.xml</types1:PublishedContributionId>
+      <types1:ModificationDate>2023-06-23T16:57:56Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -26,38 +23,11 @@
                    displayName="tf_SEGUROS_BCR"
                    name="tf_SEGUROS_BCR"
                    overrideAPIName="true">
-            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd">/mnt/busdatos/Entrada/Param/Param_Seg.param</parameterSet>
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
             <appliesTo/>
             <description>FLUJO DE CARGA DE SEGUROS_BCR</description>
             <tags/>
             <generator>Informatica Process Designer 11</generator>
-            <input>
-               <parameter description="" name="LISTA" type="string">
-                  <options>
-                     <option name="required">false</option>
-                  </options>
-               </parameter>
-               <parameter description="" name="FUENTE" type="string">
-                  <options>
-                     <option name="required">false</option>
-                  </options>
-               </parameter>
-               <parameter description="" name="COMANDO" type="string">
-                  <options>
-                     <option name="required">false</option>
-                  </options>
-               </parameter>
-               <parameter description="" name="EXTENSION" type="string">
-                  <options>
-                     <option name="required">false</option>
-                  </options>
-               </parameter>
-               <parameter description="" name="InputFileFILENAME" type="string">
-                  <options>
-                     <option name="required">false</option>
-                  </options>
-               </parameter>
-            </input>
             <tempFields>
                <field description=""
                       name="mt_GEN_Obtiene_ID_Proceso_Carga"
@@ -101,6 +71,13 @@
                   </options>
                </field>
                <field description="" name="cmd_Listado" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description="" name="Command Task 1" type="reference">
                   <options>
                      <option name="referenceTo">$po:INFA-commandTask</option>
                      <option name="failOnNotRun">false</option>
@@ -206,10 +183,54 @@
                         <operation source="field" to="temp.cmd_Elimina_Listado/output/Std_Error">Std Error</operation>
                      </serviceOutput>
                   </service>
-                  <link id="lj55pbo4" targetId="lj55pbp0"/>
+                  <link id="lj8p80a7" targetId="lj8p80b3"/>
                   <events>
                      <catch faultField="temp.cmd_Elimina_Listado/fault"
                             id="lj55pbn1"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="lj8p80b3">
+                  <service id="lj8p80a6">
+                     <title>Command Task 1</title>
+                     <serviceName>ICSExecuteCommandTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant">Command Task 1</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                        <parameter name="Runtime Environment" source="constant">010UYM25000000000004:BCR0106INFA8011</parameter>
+                        <parameter name="Max Wait" source="constant">86400</parameter>
+                        <parameter name="Script Name" source="constant"/>
+                        <parameter name="Input Arguments" source="constant"/>
+                        <parameter name="Work Directory" source="constant"/>
+                        <parameter name="RuntimeEnvGUID" source="constant">2KlpZ4hk80PgrgH0CxoRcH</parameter>
+                        <parameter name="FailTaskIfAnyScriptFails" source="constant">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="INFA-commandTask">temp.Command Task 1</operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
+                           <operation source="formula" to="INFA-commandTask/input[1]/script-1/scriptName">
+                              <expression language="XQuery">$input.COMANDO -o 'Crear' -d $input. -l 'ListadoTemp.txt' -r $input.LISTA -E $input.InputF ileFILENAME*.*\.* -R 'OFF'</expression>
+                           </operation>
+                           <operation source="formula" to="INFA-commandTask/input[1]/script-1/inputArguments"/>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir">/mnt/busdatos/Entrada/Param/</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Command Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Command Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Exit_Code">Exit Code</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Execution_Status">Execution Status</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Std_Error">Std Error</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lj8p80a8" targetId="lj55pbp0"/>
+                  <events>
+                     <catch faultField="temp.Command Task 1/fault"
+                            id="lj8p80b2"
                             interrupting="true"
                             name="error">
                         <suspend/>
@@ -572,11 +593,6 @@
                   <description/>
                   <tags/>
                   <detail>
-                     <field label="Input Parameters"
-                            name="input"
-                            nullable="true"
-                            required="false"
-                            type="reference"/>
                      <field label="InOut Parameters"
                             name="inout"
                             nullable="true"
@@ -697,5 +713,5 @@
       <types1:GUID>dGkzbzspze4jvTVf02oSsw</types1:GUID>
       <types1:DisplayName>tf_SEGUROS_BCR</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-06-21T04:40:30.365Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-06-23T18:00:26.515Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

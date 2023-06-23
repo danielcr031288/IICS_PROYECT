@@ -52,14 +52,11 @@
       "repoInfo" : {
         "repoHandle" : "010UYM0Z00000000003F"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "MAPA DE CARGA DE SEGUROS",
         "contentType" : "JSON",
-        "documentState" : "VALID"
+        "documentState" : "INVALID"
       }
     },
     "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
