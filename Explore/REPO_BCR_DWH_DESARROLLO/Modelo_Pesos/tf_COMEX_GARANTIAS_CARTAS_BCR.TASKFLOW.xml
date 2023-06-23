@@ -13,11 +13,8 @@
       <types1:CreatedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:CreatedBy>
       <types1:CreationDate>2022-03-22T04:04:00Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
-      <types1:ModificationDate>2022-03-23T01:09:32Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
-      <types1:PublicationDate>2022-03-23T01:09:50Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/tf.tf_COMEX_GARANTIAS_CARTAS_BCR/tf_COMEX_GARANTIAS_CARTAS_BCR.tf.xml</types1:PublishedContributionId>
+      <types1:ModificationDate>2023-06-23T21:50:33Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -68,9 +65,16 @@
                      <option name="referenceTo">$po:mt-GEN-ACTUALIZA-FECHA-ULTIMA-CARGA</option>
                   </options>
                </field>
+               <field description="" name="MT_GARANTIAS_SALES_FORCE" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mp-GARANTIAS-SF-DWH</option>
+                  </options>
+               </field>
             </tempFields>
             <notes/>
-            <deployment suspendOnFault="false" tracingLevel="verbose">
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
                <rest/>
             </deployment>
             <flow id="a">
@@ -306,7 +310,7 @@
                                    to="temp.Mt_COMEX_GARANTIAS_CARTAS_BCR/inout/mp_Fecha_Ult_Carga">mp_Fecha_Ult_Carga</operation>
                      </serviceOutput>
                   </service>
-                  <link id="kzrsws6h" targetId="kzrsws6g"/>
+                  <link id="lj93unor" targetId="lj93unow"/>
                   <events>
                      <catch faultField="temp.Mt_COMEX_GARANTIAS_CARTAS_BCR/fault"
                             id="kyxirs1i"
@@ -316,6 +320,59 @@
                      </catch>
                      <catch faultField="temp.Mt_COMEX_GARANTIAS_CARTAS_BCR/fault"
                             id="kyxirs1j"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="lj93unow">
+                  <service id="lj93unoq">
+                     <title>MT_GARANTIAS_SALES_FORCE</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mp_GARANTIAS_SF_DWH</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">3jdFqHKEkD8fVP6ltOlmQt</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mp-GARANTIAS-SF-DWH">temp.MT_GARANTIAS_SALES_FORCE</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.MT_GARANTIAS_SALES_FORCE/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.MT_GARANTIAS_SALES_FORCE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.MT_GARANTIAS_SALES_FORCE/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.MT_GARANTIAS_SALES_FORCE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.MT_GARANTIAS_SALES_FORCE/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.MT_GARANTIAS_SALES_FORCE/inout/v_max_value">v_max_value</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lj93unos" targetId="kzrsws6g"/>
+                  <events>
+                     <catch faultField="temp.MT_GARANTIAS_SALES_FORCE/fault"
+                            id="lj93unou"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.MT_GARANTIAS_SALES_FORCE/fault"
+                            id="lj93unov"
                             interrupting="true"
                             name="warning"/>
                   </events>
@@ -417,6 +474,11 @@
                             nullable="true"
                             required="false"
                             type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
                   </detail>
                </processObject>
                <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
@@ -446,6 +508,11 @@
                             nullable="true"
                             required="false"
                             type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
                   </detail>
                </processObject>
                <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
@@ -475,6 +542,11 @@
                             nullable="true"
                             required="false"
                             type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
                   </detail>
                </processObject>
                <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
@@ -504,6 +576,50 @@
                             nullable="true"
                             required="false"
                             type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mp-GARANTIAS-SF-DWH"
+                              isByCopy="true"
+                              name="Mp-GARANTIAS-SF-DWH">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
                   </detail>
                </processObject>
             </dependencies>
@@ -512,5 +628,5 @@
       <types1:GUID>7ztuazm1KG8cqJDdv8MhKj</types1:GUID>
       <types1:DisplayName>tf_COMEX_GARANTIAS_CARTAS_BCR</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-06-23T21:35:31.377Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-06-23T21:52:05.069Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

@@ -84,6 +84,26 @@
     },
     "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
   }, {
+    "id" : "3jdFqHKEkD8fVP6ltOlmQt",
+    "name" : "Mp_GARANTIAS_SF_DWH",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010UYM0Z00000000003I"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/REPO_BCR_DWH_DESARROLLO/Modelo_Pesos"
+  }, {
     "id" : "iedOBbOqheSjfaJVCTeYkI",
     "name" : "mt_GEN_ACTUALIZA_FECHA_ULTIMA_CARGA",
     "type" : "MTT",
