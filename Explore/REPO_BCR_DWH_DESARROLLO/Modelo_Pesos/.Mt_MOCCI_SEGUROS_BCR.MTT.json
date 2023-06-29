@@ -35,7 +35,10 @@
       "repoInfo" : {
         "repoHandle" : "010UYM17000000000037"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "WF de clientes Seguros_BCR",
         "contentType" : "JSON",

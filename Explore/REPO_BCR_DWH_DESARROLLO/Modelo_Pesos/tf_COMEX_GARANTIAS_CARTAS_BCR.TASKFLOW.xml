@@ -14,7 +14,10 @@
       <types1:CreationDate>2022-03-22T04:04:00Z</types1:CreationDate>
       <types1:ModifiedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:ModifiedBy>
       <types1:ModificationDate>2023-06-23T21:50:33Z</types1:ModificationDate>
-      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>jpaniagua_InfaCloudDesa@bancobcr.com</types1:PublishedBy>
+      <types1:PublicationDate>2023-06-23T21:52:50Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_COMEX_GARANTIAS_CARTAS_BCR/tf_COMEX_GARANTIAS_CARTAS_BCR.tf.xml</types1:PublishedContributionId>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -628,5 +631,5 @@
       <types1:GUID>7ztuazm1KG8cqJDdv8MhKj</types1:GUID>
       <types1:DisplayName>tf_COMEX_GARANTIAS_CARTAS_BCR</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-06-23T21:52:05.069Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-06-29T21:18:10.468Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
