@@ -1,0 +1,527 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>jvZvWMOxBchzt1Y-gt-6835292-2020-04-04T20:18:10.153Z::tf.xml</types1:EntryId>
+      <types1:Name>Tarea_CargaDatos_DWH_SF</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>dpr1372</types1:CreatedBy>
+      <types1:CreationDate>2020-04-04T20:18:10Z</types1:CreationDate>
+      <types1:ModifiedBy>dpr1372</types1:ModifiedBy>
+      <types1:ModificationDate>2020-04-28T20:12:00Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>dpr1372</types1:PublishedBy>
+      <types1:PublicationDate>2020-04-28T21:34:10Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.Tarea_CargaDatos_DWH_SF/Tarea_CargaDatos_DWH_SF.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Tarea_CargaDatos_DWH_SF"
+                   name="Tarea_CargaDatos_DWH_SF"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="Event_Hechos_productos" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">$po:INTERNALB2BFILELISTENER1565084895</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">3DLhmapDh80jaabn8HlAsZ</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description=""
+                      name="m_DWH_INT_Sales_Force_Clientes_Fisicos"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:wf-Carga-Clientes-Fisicos-SF</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="m_DWH_INT_Sales_Force_Clientes_Juridicos"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:wf-Carga-Clientes-Juridicos-SF</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="m_DWH_INT_Sales_Force_Productos_Fisicos"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:wf-Carga-Productos-Fisicos-SF</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="m_DWH_INT_Sales_Force_Productos_Juridicos"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:wf-Carga-Productos-Juridicos-SF</option>
+                  </options>
+               </field>
+               <field description="" name="Cmd_Copia_Files_SF_2" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <event eventSource="fileListenerTask:Event_Hechos_productos"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="j3wfjy2l" targetId="k8m22u3o"/>
+               </start>
+               <eventContainer id="k8m22u3o">
+                  <service id="j3wfjy2k">
+                     <title>m_DWH_INT_Sales_Force_Clientes_Fisicos</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">wf_Carga_Clientes_Fisicos_SF</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">8RQp7FaPm4Xch4FYM35DIH</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="wf-Carga-Clientes-Fisicos-SF">temp.m_DWH_INT_Sales_Force_Clientes_Fisicos</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/output/Error_Message">Error Message</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="k8osr89n" targetId="k8m22u3s"/>
+                  <events>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/fault"
+                            id="k8m22u3m"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Clientes_Fisicos/fault"
+                            id="k8m22u3n"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="k8m22u3s">
+                  <service id="j3wfjy2s">
+                     <title>m_DWH_INT_Sales_Force_Clientes_Juridicos</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">wf_Carga_Clientes_Juridicos_SF</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">gW0CWrbs5oeeoZnWAVmSia</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="wf-Carga-Clientes-Juridicos-SF">temp.m_DWH_INT_Sales_Force_Clientes_Juridicos</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/output/Error_Message">Error Message</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="k8rhq6np" targetId="k8m22u4k"/>
+                  <events>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/fault"
+                            id="k8m22u3q"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Clientes_Juridicos/fault"
+                            id="k8m22u3r"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="k8m22u4k">
+                  <service id="k8m22u3w">
+                     <title>m_DWH_INT_Sales_Force_Productos_Fisicos</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">wf_Carga_Productos_Fisicos_SF</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">4347BNTciIcdSBClf3vcA1</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="wf-Carga-Productos-Fisicos-SF">temp.m_DWH_INT_Sales_Force_Productos_Fisicos</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/output/Error_Message">Error Message</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="k8m22u43" targetId="k8m22u4n"/>
+                  <events>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/fault"
+                            id="k8m22u4i"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Productos_Fisicos/fault"
+                            id="k8m22u4j"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="k8m22u4n">
+                  <service id="k8m22u42">
+                     <title>m_DWH_INT_Sales_Force_Productos_Juridicos</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">wf_Carga_Productos_Juridicos_SF</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">4Z4zsSuNzcOlBTVui0ZeIj</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="wf-Carga-Productos-Juridicos-SF">temp.m_DWH_INT_Sales_Force_Productos_Juridicos</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/output/Error_Message">Error Message</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="k8qd6o6m" targetId="k8qd6o6x"/>
+                  <events>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/fault"
+                            id="k8m22u4l"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_DWH_INT_Sales_Force_Productos_Juridicos/fault"
+                            id="k8m22u4m"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="k8qd6o6x">
+                  <service id="k8qd6o6l">
+                     <title>Cmd_Copia_Files_SF_2</title>
+                     <serviceName>ICSExecuteCommandTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant">Cmd_Copia_Files_SF_2</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                        <parameter name="Runtime Environment" source="constant">010UYM25000000000004:BCR0106INFA8011</parameter>
+                        <parameter name="Script Name" source="constant">/u01/Informatica/SecureAgent/apps/Data_Integration_Server/data/Scripts/Copy_Files_SF.sh</parameter>
+                        <parameter name="Input Arguments" source="constant"/>
+                        <parameter name="Work Directory" source="constant">/u01/Informatica/SecureAgent/apps/Data_Integration_Server/data/Scripts</parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Cmd_Copia_Files_SF_2/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Cmd_Copia_Files_SF_2/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Cmd_Copia_Files_SF_2/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Cmd_Copia_Files_SF_2/output/Exit_Code">Exit Code</operation>
+                        <operation source="field" to="temp.Cmd_Copia_Files_SF_2/output/Execution_Status">Execution Status</operation>
+                        <operation source="field" to="temp.Cmd_Copia_Files_SF_2/output/Std_Error">Std Error</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="k8s14sj4" targetId="k8s14sj3"/>
+                  <events>
+                     <catch faultField="temp.Cmd_Copia_Files_SF_2/fault"
+                            id="k8qd6o6w"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <container id="k8s14sj3" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="k8s14sj7">
+                     <service id="k8s14sjz">
+                        <title>Notificacion de Email ERROR</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">jpaniagua@bancobcr.com</parameter>
+                           <parameter name="Email Cc" source="constant">jpaniagua@bancobcr.com</parameter>
+                           <parameter name="Email Subject" source="formula">
+                              <expression language="XQuery">fn:concat(fn:concat("Se envió correo con el Log de fallos en el dfs:","Fecha:",fn:current-date()),"")
+
+
+
+</expression>
+                           </parameter>
+                           <parameter name="Email Content Type" source="constant">html</parameter>
+                           <parameter name="Email Body" source="constant">&lt;p&gt;error en sales force fueron enviados a la ruta: \\dfsaplicaciones\0572\DWH\&lt;/p&gt;
+&lt;p&gt;num de tarea:&lt;/p&gt;
+&lt;p&gt;{$temp.m_DWH_INT_Sales_Force_Clientes_Juridicos[1]/output[1]/Task_Id}&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</parameter>
+                        </serviceInput>
+                        <serviceOutput/>
+                     </service>
+                     <link id="k8s14sj8" targetId="k8s14sj3" type="containerLink"/>
+                  </flow>
+                  <flow id="k8s14sli">
+                     <link id="k8s14slj" targetId="k8s14sj3" type="containerLink"/>
+                  </flow>
+                  <link id="k8s14sj6" targetId="k8s14sj7" type="containerLink">
+                     <condition source="formula">
+                        <function name="greater-or-equals">
+                           <arg name="left">{$temp.m_DWH_INT_Sales_Force_Clientes_Juridicos[1]/output[1]/Failed_Target_Rows}</arg>
+                           <arg name="right">{1}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="k8s14slh" targetId="k8s14sli" type="containerLink"/>
+                  <link id="k8s14sjf" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="wf-Carga-Clientes-Fisicos-SF"
+                              isByCopy="true"
+                              name="wf-Carga-Clientes-Fisicos-SF">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="wf-Carga-Clientes-Juridicos-SF"
+                              isByCopy="true"
+                              name="wf-Carga-Clientes-Juridicos-SF">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="wf-Carga-Productos-Fisicos-SF"
+                              isByCopy="true"
+                              name="wf-Carga-Productos-Fisicos-SF">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="wf-Carga-Productos-Juridicos-SF"
+                              isByCopy="true"
+                              name="wf-Carga-Productos-Juridicos-SF">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INFA-commandTask"
+                              isByCopy="true"
+                              name="INFA-commandTask">
+                  <description>This process object represents a taskflow specific command task output field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INTERNALB2BFILELISTENER1565084895"
+                              isByCopy="true"
+                              name="INTERNALB2BFILELISTENER1565084895">
+                  <description>This process object represents a taskflow specific file task field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Arrived Files" name="arrivedFiles" type="objectlist">
+                        <options>
+                           <option name="referenceTo">$po:INTERNALB2BFILELISTENER1565084895-arrivedFiles</option>
+                           <option name="relationshipName">Child</option>
+                           <option hide="true" name="multiSelect">true</option>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                     <field label="Update Files" name="updatedFiles" type="objectlist">
+                        <options>
+                           <option name="referenceTo">$po:INTERNALB2BFILELISTENER1565084895-updatedFiles</option>
+                           <option name="relationshipName">Child</option>
+                           <option hide="true" name="multiSelect">true</option>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                     <field label="Deleted Files" name="deletedFiles" type="objectlist">
+                        <options>
+                           <option name="referenceTo">$po:INTERNALB2BFILELISTENER1565084895-deletedFiles</option>
+                           <option name="relationshipName">Child</option>
+                           <option hide="true" name="multiSelect">true</option>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INTERNALB2BFILELISTENER1565084895-arrivedFiles"
+                              isByCopy="true"
+                              name="INTERNALB2BFILELISTENER1565084895-arrivedFiles">
+                  <description>This process object represents a arrivedFiles structure of the file task field.This is in case of taskflow.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Path" name="path" type="string"/>
+                     <field label="Name" name="name" type="string"/>
+                     <field label="Size" name="size" type="string"/>
+                     <field label="Last Modified" name="lastModified" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INTERNALB2BFILELISTENER1565084895-updatedFiles"
+                              isByCopy="true"
+                              name="INTERNALB2BFILELISTENER1565084895-updatedFiles">
+                  <description>This process object represents a updatedFiles structure of the file task field.This is in case of taskflow.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Path" name="path" type="string"/>
+                     <field label="Name" name="name" type="string"/>
+                     <field label="Size" name="size" type="string"/>
+                     <field label="Last Modified" name="lastModified" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INTERNALB2BFILELISTENER1565084895-deletedFiles"
+                              isByCopy="true"
+                              name="INTERNALB2BFILELISTENER1565084895-deletedFiles">
+                  <description>This process object represents file listener task deletedFiles structure.This is in case of taskflow.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Path" name="path" type="string"/>
+                     <field label="Name" name="name" type="string"/>
+                     <field label="Size" name="size" type="string"/>
+                     <field label="Last Modified" name="lastModified" type="string"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>6BLKngWwGaEiSNHeWjRJ2P</types1:GUID>
+      <types1:DisplayName>Tarea_CargaDatos_DWH_SF</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-06-29T21:39:30.522Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
